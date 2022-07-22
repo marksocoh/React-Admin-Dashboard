@@ -1,0 +1,35 @@
+import "./featured.scss"
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+const Featured = () => {
+  return (
+    <div className='featured'>
+        <div className="top">
+            <h1 className="title">Total revenue</h1>
+            <MoreVertIcon fontSize="small"/>
+        </div>
+        <div className="bottom">
+            <div className="featuredChart">
+                <CircularProgressbar value={70} text={"70%"} strokeWidth={5}/>
+            </div>
+            <p className="title">Total fee collected today</p>
+            <p className="amount">Ksh.300,000</p>
+            <p className="desc">Previous Transaction processing.Last payment may not be included.</p>
+            <div className="summary">
+                <div className="item">
+                    <div className="itemTitle">Target</div>
+                    <div className="itemResult">
+                        <KeyboardArrowDownIcon fontSize="small"/>
+                        <div className="resultAmount">Ksh.12,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Featured

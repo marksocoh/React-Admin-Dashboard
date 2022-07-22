@@ -1,0 +1,29 @@
+import Sidebar from '../../components/sidebar/Sidebar.jsx'
+import Navbar from '../../components/navbar/Navbar.jsx'
+import "./home.scss"
+import Widgets from '../../components/widgets/Widgets.jsx'
+import Featured from '../../components/featured/Featured.jsx'
+import Chart from '../../components/chart/Chart.jsx'
+
+const Home = () => {
+  return (
+    <div className='home'>
+        <Sidebar/>
+        <div className='homeContainer'>
+        <Navbar/>
+         <div className="widgets">
+            <Widgets type="user"/>
+            <Widgets type="fee"/>
+            <Widgets type="balance"/>
+            <Widgets type="staff"/>
+         </div>
+         <div className="charts">
+            <Featured/>
+            <Chart/>
+         </div>
+        </div>
+    </div>
+  )
+}
+
+export default Home
