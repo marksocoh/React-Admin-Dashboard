@@ -4,6 +4,7 @@ import "./home.scss"
 import Widgets from '../../components/widgets/Widgets.jsx'
 import Featured from '../../components/featured/Featured.jsx'
 import Chart from '../../components/chart/Chart.jsx'
+import Table from '../../components/table/Table.jsx'
 
 const Home = () => {
   return (
@@ -20,6 +21,12 @@ const Home = () => {
          <div className="charts">
             <Featured/>
             <Chart/>
+         </div>
+         <div className="listContainer">
+          <div className="listTitle">
+            Latest transactions
+            <Table/>
+          </div>
          </div>
         </div>
     </div>
