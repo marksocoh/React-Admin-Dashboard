@@ -7,27 +7,38 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import './sidebar.scss'
 
+import { Link } from 'react-router-dom';
+
 const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className='top'> 
-        <span className='logo'>EAIHM</span>
+        <Link to='/' style={{textDecoration:'none'}}>
+            <span className='logo'>EAIHM</span>
+        </Link>
+            
       </div>
       <hr/>
       <div className='center'>
         <ul>
           <p className="title">MAIN</p>
             <li>
+                <Link to='/' style={{textDecoration:'none'}}>
                 <DashboardIcon className='icon'/>
                 <span>Dashboard</span>
+                </Link>
             </li> 
             <li>
-                <GroupAddIcon className='icon'/>
-                <span>Users</span>
+                <Link to='/users' style={{textDecoration:'none'}}>
+                    <GroupAddIcon className='icon'/>
+                    <span>Users</span>
+                </Link>
             </li> 
             <li>
-                <PeopleAltIcon className='icon'/>
-                <span>Students</span>
+                <Link to='/users' style={{textDecoration:'none'}}>
+                    <PeopleAltIcon className='icon'/>
+                    <span>Students</span>
+                </Link>
             </li>
             <li>
                 <AssignmentIndIcon className='icon'/>
